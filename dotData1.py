@@ -45,28 +45,32 @@ esn = ESN(n_inputs = 1,
       spectral_radius = spectral_radius,
       noise = noise)
 
-visited = []
-visited.append(stocks['Company'][0])
-stonk = []
-visited.append(stocks.iloc[0])
-for i in range(1, len(stocks['Company'])):
-    if stocks['Company'][i] not in visited: # unique
-        break
-    else:
-        print(stocks.iloc[i])
-        stonk.append(stocks.iloc[i])
+stonk = [] # list of data frames 0-9 for 10 companies
+company_list = [] # list of companies (10)
+# company_list=stocks['Company'].unique().tolist()
 
-# visited = visited.to_numpy()
-print(stonk)
-trainlen = 1500
+for company, stockCompany in stocks.groupby('Company'):
+    company_list.append(company)
+    stonk.append(stockCompany)
+    
+trainlen = 100
 future = 1
 futureTotal = 100
 pred_tot = np.zeros(futureTotal)
+# maybe just focus on high?
+compJ = []
+print(stonk[0])
+print(type(stonk[0]))
+for i in stonk[0]:
+    print(type(i))
+    compJ.append(i['High'])
 
+print(compJ)
 for i in range(0,futureTotal,future):
-    pred_training = esn.fit(np.ones(trainlen), stocks[i:trainlen+i])
+    pred_training = esn.fit(np.ones(trainlen), stonk[0][i:trainlen+i])
     prediction = esn.predict(np.ones(future))
     pred_tot[i:i+future] = prediction[:,0]
+
 
 """
 error, validation_set = run_echo(1.2, .005,2)
