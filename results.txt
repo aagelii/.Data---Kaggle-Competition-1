@@ -1,0 +1,10 @@
+The predicted open price for Company H the next day is: 222.19The predicted open price for Company I the next day is: 456.77The predicted open price for SHARE A the next day is: 2720.37The predicted open price for SHARE B the next day is: 199.57The predicted open price for SHARE C the next day is: 2897.84The predicted open price for SHARE D the next day is: 164.19The predicted open price for SHARE E the next day is: 355.66The predicted open price for SHARE F the next day is: 289.33The predicted open price for SHARE G the next day is: 872.40The predicted open price for SHARE J the next day is: 76.60The predicted open price for Company H the next day is: 222.19
+The predicted open price for Company I the next day is: 456.77
+The predicted open price for SHARE A the next day is: 2720.37
+The predicted open price for SHARE B the next day is: 199.57
+The predicted open price for SHARE C the next day is: 2897.84
+The predicted open price for SHARE D the next day is: 164.19
+The predicted open price for SHARE E the next day is: 355.66
+The predicted open price for SHARE F the next day is: 289.33
+The predicted open price for SHARE G the next day is: 872.40
+The predicted open price for SHARE J the next day is: 76.60
